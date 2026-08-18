@@ -17,20 +17,20 @@ Before completing any task in the module, make sure that you followed all the st
 4. Install [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli).
 
 5. Log in to AWS CLI on your computer by running the command:
-   
+
     ```
     aws configure
     ```
 
-## Task Requirements 
+## Task Requirements
 
-Grafana is an app for building dashboards with data from different sources. To run it, you need a webserver and a database. Today, you will start deploying your deployment's infrastructure with Terraform. 
+Grafana is an app for building dashboards with data from different sources. To run it, you need a webserver and a database. Today, you will start deploying your deployment's infrastructure with Terraform.
 
-To complete this task: 
+To complete this task:
 
-1. Edit `main.tf` — uncommend the `aws_vpc` resource. VPC is an AWS resource for building private networks. 
+1. Edit `main.tf` — uncommend the `aws_vpc` resource. VPC is an AWS resource for building private networks.
 
-2. Run the following commands to generate a Terraform execution plan in **JSON** format: 
+2. Run the following commands to generate a Terraform execution plan in **JSON** format:
 
     ```
     terraform init
@@ -39,19 +39,19 @@ To complete this task:
     ```
 
 3. Run an automated test to check yourself:
- 
+
     ```
     pwsh ./tests/test-tf-plan.ps1
     ```
 
-If any test fails - please check your task code and repeat step 2 to generage a new tfplan.json file. 
+If any test fails - please check your task code and repeat step 2 to generage a new tfplan.json file.
 
-4. Deploy infrastructure using the following command: 
-    
+4. Deploy infrastructure using the following command:
+
     ```
     terraform apply
     ```
 
-    Make sure to collect module outputs - we will use those values in the next tasks. 
+    Make sure to collect module outputs - we will use those values in the next tasks.
 
-5. Commit file `tfplan.json` and submit your solution for review. 
+5. Commit file `tfplan.json` and submit your solution for review.
